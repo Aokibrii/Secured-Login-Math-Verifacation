@@ -156,7 +156,7 @@ $_SESSION['math_captcha_answer'] = $answer;
         </div>
         <div class="checkbox-container">
           <input type="checkbox" id="show-math-modal" name="show-math-modal">
-          <label for="show-math-modal">Click the Checkbox to Register your account</label>
+          <label for="show-math-modal">Click the Checkbox to Register your Account</label>
         </div>
         <input type="hidden" name="math-answer" id="math-answer-hidden" value="">
         <button type="submit" name="signup" id="signup-btn" disabled>Register</button>
@@ -198,7 +198,6 @@ $_SESSION['math_captcha_answer'] = $answer;
         </div>
         <div class="modal-buttons">
           <button type="button" id="verify-math">Verify</button>
-          <button type="button" id="cancel-math">Cancel</button>
         </div>
       </div>
     </div>
