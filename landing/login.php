@@ -1,9 +1,5 @@
 <?php
 session_start();
-// Prevent caching
-header("Cache-Control: no-cache, no-store, must-revalidate");
-header("Pragma: no-cache");
-header("Expires: 0");
 
 if (isset($_SESSION['email'])) {
   header("Location: page/index.php");
