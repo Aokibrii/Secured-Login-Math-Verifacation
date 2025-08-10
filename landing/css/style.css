@@ -4,8 +4,9 @@
   --accent-color: #0c057b;
   --base-color: #ffffff;
   --text-color: #0a0a0a;
-  --input-color: #d5d6d9;
+  --input-color: #e1e2e4;
   --hover-color: #030657ca;
+  --lively-color: #0c057b;
   --verify-color: #28a745;
   --verify-hover-color: #218838;
 }
@@ -208,8 +209,8 @@ form div.incorrect input {
 }
 
 .checkbox-container input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   margin: 0;
   accent-color: var(--accent-color);
@@ -218,6 +219,7 @@ form div.incorrect input {
 
 .checkbox-container label {
   font-size: 14px;
+  font-weight: 500;
   color: var(--text-color);
   cursor: pointer;
   margin-left: 8px;
@@ -229,6 +231,9 @@ form div.incorrect input {
   white-space: normal;
   text-align: left;
   word-wrap: break-word;
+}
+.checkbox-container label:hover {
+  color: var(--lively-color);
   text-decoration: underline;
 }
 /* Modal Styles */
@@ -407,7 +412,7 @@ form div.incorrect input {
 .modal-buttons button {
   padding: 15px 30px;
   border: none;
-  border-radius: 16px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -424,19 +429,10 @@ form div.incorrect input {
     var(--verify-hover-color)
   );
   color: var(--base-color);
-  box-shadow: 0 4px 15px rgba(40, 43, 46, 0.3);
+  box-shadow: 0 2px 10px rgba(40, 43, 46, 0.3);
 }
 
 .modal-buttons button:first-child:hover {
   background: linear-gradient(120deg, #218838, #1e7e34);
 }
 
-.modal-buttons button:last-child {
-  background: linear-gradient(120deg, #f42912, #b92305);
-  color: var(--base-color);
-  box-shadow: 0 4px 15px rgba(40, 43, 46, 0.3);
-}
-
-.modal-buttons button:last-child:hover {
-  background: linear-gradient(120deg, #d32f2f, #b92305);
-}
