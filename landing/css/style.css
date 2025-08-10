@@ -2,6 +2,7 @@
 
 :root {
   --accent-color: #0c057b;
+  --border-color: #171717;
   --base-color: #ffffff;
   --text-color: #0a0a0a;
   --input-color: #e1e2e4;
@@ -33,10 +34,10 @@ body {
   box-sizing: border-box;
   background-color: var(--base-color);
   height: 100vh;
-  width: max(40%, 600px);
+  width: max(40%, 400px);
   padding: 10px;
   border-radius: 0 15px 15px 0;
-  border: solid 2px var(--accent-color);
+  border: solid 2px var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +73,7 @@ h1 {
   text-transform: uppercase;
 }
 form {
-  width: min(380px, 100%);
+  width: min(370px, 100%);
   margin-top: 20px;
   margin-bottom: 50px;
   display: flex;
@@ -160,6 +161,9 @@ a:hover {
   .wrapper {
     width: min(600px, 100%);
     border-radius: 0;
+  }
+  form {
+    width: 380px;
   }
 }
 form div.incorrect label {
