@@ -6,6 +6,8 @@
   --text-color: #0a0a0a;
   --input-color: #d5d6d9;
   --hover-color: #030657ca;
+  --verify-color: #28a745;
+  --verify-hover-color: #218838;
 }
 * {
   margin: 0;
@@ -301,12 +303,16 @@ form div.incorrect input {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 30px;
+  border-radius: 25px;
 }
 
-.close:hover {
-  background-color: rgba(255, 255, 255, 0.216);
-  position: inherit;
+.close:hover svg {
+  fill: #ff0000;
+}
+
+.close svg {
+  width: 25px;
+  height: 25px;
 }
 
 .modal-body {
@@ -317,13 +323,13 @@ form div.incorrect input {
 .modal-body p {
   margin-bottom: 25px;
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   font-weight: 500;
 }
 
 .math-question {
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  background: linear-gradient(135deg, #e3e7ea, #e9ecef);
   padding: 30px;
   border-radius: 15px;
   margin: 25px 0;
@@ -358,7 +364,8 @@ form div.incorrect input {
   box-sizing: border-box;
 }
 
-.math-input input:focus {
+.math-input input:focus,
+.math-input input:hover {
   outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(12, 5, 123, 0.1);
@@ -394,40 +401,42 @@ form div.incorrect input {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 28px;
 }
 
 .modal-buttons button {
   padding: 15px 30px;
   border: none;
-  border-radius: 12px;
-  font-size: 16px;
+  border-radius: 16px;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
   text-transform: uppercase;
   letter-spacing: 1px;
-  min-width: 120px;
+  min-width: 115px;
 }
 
 .modal-buttons button:first-child {
-  background: linear-gradient(135deg, var(--accent-color), var(--hover-color));
+  background: linear-gradient(
+    120deg,
+    var(--verify-color),
+    var(--verify-hover-color)
+  );
   color: var(--base-color);
-  box-shadow: 0 4px 15px rgba(12, 5, 123, 0.3);
+  box-shadow: 0 4px 15px rgba(40, 43, 46, 0.3);
 }
 
 .modal-buttons button:first-child:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(12, 5, 123, 0.4);
+  background: linear-gradient(120deg, #218838, #1e7e34);
 }
 
 .modal-buttons button:last-child {
-  background: linear-gradient(135deg, #6c757d, #5a6268);
+  background: linear-gradient(120deg, #f42912, #b92305);
   color: var(--base-color);
-  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+  box-shadow: 0 4px 15px rgba(40, 43, 46, 0.3);
 }
 
 .modal-buttons button:last-child:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+  background: linear-gradient(120deg, #d32f2f, #b92305);
 }
